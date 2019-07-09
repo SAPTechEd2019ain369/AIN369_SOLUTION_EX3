@@ -62,7 +62,7 @@
         }
         set angleMax(value) {
             this._endAngleDeg = value;
-            
+            this.redraw();
         };
 
         redraw() {
