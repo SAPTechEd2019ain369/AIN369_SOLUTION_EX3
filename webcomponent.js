@@ -56,6 +56,15 @@
             this.redraw();
         };
 
+        //Getters and Setters
+        get angleMax() {
+            return this._endAngleDeg;
+        }
+        set angleMax(value) {
+            this._endAngleDeg = value;
+            
+        };
+
         redraw() {
             if (!this._svgContainer){
                 this._svgContainer = window._d3.select(this._shadowRoot)
