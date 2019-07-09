@@ -14,6 +14,7 @@
 			"tag": "com-sap-teched-gauge-solution-exe3",
             "url": "https://sapteched2019ain369.github.io/AIN369_SOLUTION_EX3/webcomponent.js",
 			"properties": [
+				"angleMax"
 			],
             "integrity": "",
             "ignoreIntegrity" : true
@@ -29,8 +30,24 @@
 		}
     ],
 	"properties": {
+		"properties": {
+			"angleMax": {
+				"type": "number",
+				"description": "The resting angle of the gauge"
+			}
 	},
 	"methods": {
+		"setAngle": {
+			"description": "Update the gauge angle",
+			"parameters": [
+				{
+					"name": "angleMax",
+					"type": "number",
+					"description": "The displayed angle of the gauge"
+				}
+			],
+            "body": "this.angleMax = angleMax;"
+		}
 	},
 	"events": {
 	}
