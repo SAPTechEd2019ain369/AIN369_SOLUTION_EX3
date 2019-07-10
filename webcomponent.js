@@ -67,7 +67,7 @@
 
         redraw() {
             //Remove anything already in the shadow dom
-            window._d3.select(this._shadowRoot).removeChild();
+            window._d3.select("svg:svg").remove();
 
             if (!this._svgContainer){
                 this._svgContainer = window._d3.select(this._shadowRoot)
