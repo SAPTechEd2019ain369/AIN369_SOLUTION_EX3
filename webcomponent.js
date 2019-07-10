@@ -61,14 +61,16 @@
             return this._endAngleDeg;
         }
         set angleMax(value) {
+            //Empty the shadow dom
+            if (this._svgContainer){
+                this._svgContainer._groups[0][0].innerHTML = "";
+            }
+
             this._endAngleDeg = value;
             this.redraw();
         };
 
         redraw() {
-            //Remove anything already in the shadow dom
-            window._d3.select("svg:svg").remove();
-
             if (!this._svgContainer){
                 this._svgContainer = window._d3.select(this._shadowRoot)
                 .append("svg:svg")
