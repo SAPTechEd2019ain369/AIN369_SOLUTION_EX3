@@ -32,7 +32,8 @@
 	"properties": {
 		"angleMax": {
 			"type": "number",
-			"description": "The resting angle of the gauge"
+			"description": "The resting angle of the gauge",
+			"default" : 0
 		}
 	},
 	"methods": {
